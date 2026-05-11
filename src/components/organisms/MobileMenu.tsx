@@ -69,8 +69,8 @@ export function MobileMenu({ links }: MobileMenuProps) {
           </ul>
         </nav>
         <div className='mt-auto'>
-          <Button variant='pill' size='md' asChild>
-            <Link href='#contact'>Book A Call</Link>
+          <Button variant='pill' size='md' onClick={close} asChild>
+            <Link href='#contact'>Get in Touch</Link>
           </Button>
         </div>
       </div>
