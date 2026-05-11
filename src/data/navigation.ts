@@ -10,5 +10,5 @@ export const NAV_LINKS: NavLink[] = [
 
 export const HERO_STATS: StatItem[] = [
   { value: '+2', label: 'Internships Completed' },
-  { value: '+7', label: 'Projects Built' },
+  { value: '+8', label: 'Projects Built' },
 ]

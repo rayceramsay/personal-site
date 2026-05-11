@@ -4,7 +4,16 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     id: '1',
     category: 'Languages',
-    skills: ['Python', 'Java', 'TypeScript', 'JavaScript', 'SQL', 'C', 'PHP'],
+    skills: [
+      'Python',
+      'Java',
+      'TypeScript',
+      'JavaScript',
+      'SQL',
+      'C',
+      'PHP',
+      'R',
+    ],
   },
   {
     id: '2',
@@ -32,6 +41,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       'Jenkins',
       'TeamCity',
       'Ansible',
+      'Splunk',
     ],
   },
   {
@@ -42,6 +52,15 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     id: '5',
     category: 'Data & ML',
-    skills: ['PyTorch', 'scikit-learn', 'pandas', 'NumPy'],
+    skills: [
+      'PyTorch',
+      'scikit-learn',
+      'pandas',
+      'NumPy',
+      'Matplotlib',
+      'Tidyverse',
+      'ggplot2',
+      'ArcGIS',
+    ],
   },
 ]
