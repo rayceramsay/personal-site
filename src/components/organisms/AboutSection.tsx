@@ -40,7 +40,7 @@ export function AboutSection() {
               Honours B.Sc. Computer Science &amp; Data Science
             </p>
             <p className='text-foreground-muted text-xs'>
-              Minor in Statistics · 2022 – 2026
+              Minor in Statistics | 2022 – 2026
             </p>
           </div>
 
@@ -58,10 +58,7 @@ export function AboutSection() {
             />
           </div>
 
-          <ul
-            className='flex w-full flex-col gap-4'
-            aria-label='Personal highlights'
-          >
+          <ul className='flex flex-col gap-4' aria-label='Personal highlights'>
             {ABOUT_BULLETS.map((text, i) => (
               <li key={i} className='flex items-start gap-3'>
                 <CheckCircle2

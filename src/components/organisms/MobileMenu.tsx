@@ -20,7 +20,7 @@ export function MobileMenu({ links }: MobileMenuProps) {
         onClick={toggle}
         aria-expanded={isOpen}
         aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
-        className='text-foreground hover:bg-surface focus-visible:ring-foreground flex h-10 w-10 items-center justify-center rounded-md transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none md:hidden'
+        className='text-foreground hover:bg-surface focus-visible:ring-foreground flex h-10 w-10 touch-manipulation items-center justify-center rounded-md transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none md:hidden'
       >
         {isOpen ? (
           <X size={20} aria-hidden='true' />
@@ -29,38 +29,24 @@ export function MobileMenu({ links }: MobileMenuProps) {
         )}
       </button>
 
-      {isOpen && (
-        <div
-          className='fixed inset-0 z-40 md:hidden'
-          aria-hidden='true'
-          onClick={close}
-        />
-      )}
-
       <div
         role='dialog'
         aria-modal='true'
         aria-label='Navigation menu'
-        className={`bg-background border-border shadow-card-hover fixed top-0 right-0 z-50 flex h-full w-72 flex-col gap-6 border-l p-8 transition-transform duration-300 md:hidden ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+        aria-hidden={!isOpen}
+        className={`bg-background border-border fixed top-(--header-height) left-0 z-40 flex w-full flex-col items-center justify-center gap-10 border-t px-6 pt-8 pb-16 transition-[visibility,opacity] duration-300 ease-in-out md:hidden ${
+          isOpen ? 'visible opacity-100' : 'invisible opacity-0'
         }`}
       >
-        <button
-          type='button'
-          onClick={close}
-          aria-label='Close navigation menu'
-          className='text-foreground hover:bg-surface focus-visible:ring-foreground flex h-9 w-9 items-center justify-center self-end rounded-md transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none'
-        >
-          <X size={18} aria-hidden='true' />
-        </button>
-        <nav>
-          <ul className='flex flex-col gap-5'>
+        <nav aria-label='Mobile navigation'>
+          <ul className='flex flex-col items-center gap-2'>
             {links.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   onClick={close}
-                  className='text-foreground hover:text-foreground-muted focus-visible:ring-foreground rounded-sm text-base font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none'
+                  tabIndex={isOpen ? 0 : -1}
+                  className='text-foreground hover:text-foreground-muted focus-visible:ring-foreground block rounded-sm px-4 py-3 text-2xl font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none'
                 >
                   {link.label}
                 </Link>
@@ -68,11 +54,11 @@ export function MobileMenu({ links }: MobileMenuProps) {
             ))}
           </ul>
         </nav>
-        <div className='mt-auto'>
-          <Button variant='pill' size='md' onClick={close} asChild>
-            <Link href='#contact'>Get in Touch</Link>
-          </Button>
-        </div>
+        <Button variant='pill' size='lg' tabIndex={isOpen ? 0 : -1} asChild>
+          <Link href='#contact' onClick={close}>
+            Get in Touch
+          </Link>
+        </Button>
       </div>
     </>
   )
