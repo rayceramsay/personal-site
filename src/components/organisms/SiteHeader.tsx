@@ -12,7 +12,7 @@ export function SiteHeader() {
       role='banner'
       className='bg-background/95 border-border sticky top-0 z-30 w-full border-b backdrop-blur-sm'
     >
-      <div className='mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-6'>
+      <div className='mx-auto flex h-header max-w-6xl items-center justify-between gap-6 px-6'>
         <Link
           href='/'
           aria-label='Rayce Ramsay — home'

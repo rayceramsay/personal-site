@@ -12,7 +12,7 @@ export function HeroSection() {
       aria-labelledby='hero-heading'
       className='relative overflow-hidden'
     >
-      <div className='mx-auto grid min-h-[85vh] max-w-6xl grid-cols-1 items-center gap-10 px-6 py-16 md:grid-cols-2 md:py-24'>
+      <div className='mx-auto grid min-h-[calc(100dvh-var(--header-height))] max-w-6xl grid-cols-1 items-center gap-10 px-6 py-16 md:mb-24 md:grid-cols-2 md:py-0'>
         <div className='flex flex-col gap-6'>
           <div className='flex gap-8'>
             {HERO_STATS.map((stat) => (
@@ -46,7 +46,7 @@ export function HeroSection() {
         </div>
 
         <div className='relative order-first md:order-last'>
-          <div className='bg-surface relative aspect-[4/5] overflow-hidden rounded-3xl'>
+          <div className='bg-surface relative aspect-4/5 overflow-hidden rounded-3xl'>
             <Image
               src='/rayce_headshot.png'
               alt='Rayce Ramsay — full stack software engineer'
