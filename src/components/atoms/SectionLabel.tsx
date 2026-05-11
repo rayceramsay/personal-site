@@ -1,21 +1,25 @@
-import * as React from "react";
-import { cn } from "@/lib/utils";
+import * as React from 'react'
+import { cn } from '@/lib/utils'
 
 interface SectionLabelProps extends React.HTMLAttributes<HTMLParagraphElement> {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
-export function SectionLabel({ children, className, ...props }: SectionLabelProps) {
+export function SectionLabel({
+  children,
+  className,
+  ...props
+}: SectionLabelProps) {
   return (
     <p
       className={cn(
-        "text-sm font-medium text-foreground-muted tracking-widest uppercase flex items-center gap-1.5",
-        className
+        'text-foreground-muted flex items-center gap-1.5 text-sm font-medium tracking-widest uppercase',
+        className,
       )}
       {...props}
     >
-      <span aria-hidden="true">•</span>
+      <span aria-hidden='true'>•</span>
       {children}
     </p>
-  );
+  )
 }
