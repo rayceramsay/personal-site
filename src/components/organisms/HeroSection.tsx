@@ -1,8 +1,10 @@
 import Image from 'next/image'
-import { ChevronDown } from 'lucide-react'
+import Link from 'next/link'
 import { SectionHeading } from '@/components/atoms/SectionHeading'
+import { Button } from '@/components/atoms/Button'
 import { StatCard } from '@/components/molecules/StatCard'
 import { HERO_STATS } from '@/data/navigation'
+import { RESUME_URL } from '@/data/links'
 
 export function HeroSection() {
   return (
@@ -24,30 +26,33 @@ export function HeroSection() {
             id='hero-heading'
             className='font-black'
           >
-            Hello
+            Hello,
           </SectionHeading>
 
           <p className='text-foreground-muted text-base italic'>
-            — hi it&apos;s D&apos;Nova a design veteran!
+            — I&apos;m Rayce, a full stack software engineer.
           </p>
 
-          <a
-            href='#about'
-            className='text-foreground-muted hover:text-foreground focus-visible:ring-foreground mt-4 inline-flex w-fit items-center gap-1.5 rounded-sm text-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none'
-          >
-            Scroll down
-            <ChevronDown size={16} aria-hidden='true' />
-          </a>
+          <div className='mt-2 flex flex-wrap gap-3'>
+            <Button variant='primary' size='md' asChild>
+              <a href={RESUME_URL} target='_blank' rel='noopener noreferrer'>
+                View Resume
+              </a>
+            </Button>
+            <Button variant='outline' size='md' asChild>
+              <Link href='#contact'>Get in Touch</Link>
+            </Button>
+          </div>
         </div>
 
         <div className='relative order-first md:order-last'>
           <div className='bg-surface relative aspect-[4/5] overflow-hidden rounded-3xl'>
             <Image
-              src='https://picsum.photos/seed/portrait/480/600'
-              alt="D'Nova — design veteran portrait"
+              src='/rayce_headshot.png'
+              alt='Rayce Ramsay — full stack software engineer'
               fill
               priority
-              className='object-cover'
+              className='object-cover object-top'
               sizes='(max-width: 768px) 100vw, 50vw'
             />
           </div>

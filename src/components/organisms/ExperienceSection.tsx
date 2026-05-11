@@ -1,30 +1,33 @@
-import Link from 'next/link'
 import { SectionLabel } from '@/components/atoms/SectionLabel'
 import { SectionHeading } from '@/components/atoms/SectionHeading'
 import { Button } from '@/components/atoms/Button'
 import { ExperienceItem } from '@/components/molecules/ExperienceItem'
 import { EXPERIENCE_ITEMS } from '@/data/experience'
+import { GITHUB_URL } from '@/data/links'
 
 export function ExperienceSection() {
   return (
     <section
-      id='services'
+      id='experience'
       aria-labelledby='experience-heading'
       className='mx-auto max-w-6xl px-6 py-16 md:py-24'
     >
       <div className='grid grid-cols-1 items-start gap-12 lg:grid-cols-2'>
         <div className='flex flex-col gap-5 lg:sticky lg:top-24'>
-          <SectionLabel>Experiences</SectionLabel>
+          <SectionLabel>Experience</SectionLabel>
           <SectionHeading as='h2' size='lg' id='experience-heading'>
-            Explore My Design Journey
+            Work Experience
           </SectionHeading>
           <p className='text-foreground-muted text-sm leading-relaxed'>
-            Over the past 4+ years, I&apos;ve had the opportunity to work on a
-            wide range of design projects, collaborating with diverse teams and
-            clients to bring creative visions to life.
+            I&apos;ve worked across enterprise HR platforms and national
+            research infrastructure, shipping production code, automating
+            deployments, and maintaining high test coverage under real
+            engineering constraints.
           </p>
           <Button variant='outline' size='md' asChild>
-            <Link href='#contact'>Book A Call</Link>
+            <a href={GITHUB_URL} target='_blank' rel='noopener noreferrer'>
+              View GitHub
+            </a>
           </Button>
         </div>
 

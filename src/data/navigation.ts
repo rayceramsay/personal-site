@@ -1,13 +1,14 @@
 import type { NavLink, StatItem } from '@/types/portfolio'
 
 export const NAV_LINKS: NavLink[] = [
-  { label: 'About Me', href: '#about' },
-  { label: 'Portfolio', href: '#portfolio' },
-  { label: 'Services', href: '#services' },
-  { label: 'Blog', href: '#blog' },
+  { label: 'About', href: '#about' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Contact', href: '#contact' },
 ]
 
 export const HERO_STATS: StatItem[] = [
-  { value: '+200', label: 'Projects Completed' },
-  { value: '+50', label: 'Startups Raised' },
+  { value: '+2', label: 'Internships Completed' },
+  { value: '+7', label: 'Projects Built' },
 ]

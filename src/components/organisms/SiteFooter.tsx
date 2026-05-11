@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import { Bird } from 'lucide-react'
+import { Code2 } from 'lucide-react'
 import { NAV_LINKS } from '@/data/navigation'
+import { EMAIL } from '@/data/links'
 
 export function SiteFooter() {
   return (
@@ -8,12 +9,12 @@ export function SiteFooter() {
       <div className='mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 md:flex-row'>
         <Link
           href='/'
-          aria-label="D'Nova — home"
+          aria-label='Rayce Ramsay — home'
           className='text-background hover:text-background/70 focus-visible:ring-background focus-visible:ring-offset-surface-dark flex items-center gap-2 rounded-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none'
         >
-          <Bird size={22} aria-hidden='true' />
+          <Code2 size={22} aria-hidden='true' />
           <span className='text-sm font-semibold tracking-tight'>
-            D&apos;Nova
+            Rayce Ramsay
           </span>
         </Link>
 
@@ -33,10 +34,10 @@ export function SiteFooter() {
         </nav>
 
         <a
-          href='mailto:hello@dnova.com'
+          href={`mailto:${EMAIL}`}
           className='text-background hover:text-background/70 focus-visible:ring-background focus-visible:ring-offset-surface-dark rounded-sm text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none'
         >
-          hello@dnova.com
+          {EMAIL}
         </a>
       </div>
     </footer>

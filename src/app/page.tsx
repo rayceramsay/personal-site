@@ -1,12 +1,10 @@
 import { SiteHeader } from '@/components/organisms/SiteHeader'
 import { HeroSection } from '@/components/organisms/HeroSection'
 import { AboutSection } from '@/components/organisms/AboutSection'
-import { PortfolioGallery } from '@/components/organisms/PortfolioGallery'
 import { ExperienceSection } from '@/components/organisms/ExperienceSection'
-import { CTABanner } from '@/components/organisms/CTABanner'
-import { LatestWorksSection } from '@/components/organisms/LatestWorksSection'
-import { BlogSection } from '@/components/organisms/BlogSection'
-import { FinalCTASection } from '@/components/organisms/FinalCTASection'
+import { ProjectsSection } from '@/components/organisms/ProjectsSection'
+import { SkillsSection } from '@/components/organisms/SkillsSection'
+import { ContactSection } from '@/components/organisms/ContactSection'
 import { SiteFooter } from '@/components/organisms/SiteFooter'
 
 export default function Home() {
@@ -16,12 +14,10 @@ export default function Home() {
       <main id='main-content' className='flex-1'>
         <HeroSection />
         <AboutSection />
-        <PortfolioGallery />
         <ExperienceSection />
-        <CTABanner />
-        <LatestWorksSection />
-        <BlogSection />
-        <FinalCTASection />
+        <ProjectsSection />
+        <SkillsSection />
+        <ContactSection />
       </main>
       <SiteFooter />
     </>

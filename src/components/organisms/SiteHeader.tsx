@@ -1,9 +1,10 @@
 import Link from 'next/link'
-import { Bird } from 'lucide-react'
+import { Code2 } from 'lucide-react'
 import { Button } from '@/components/atoms/Button'
 import { NavLink } from '@/components/molecules/NavLink'
 import { MobileMenu } from '@/components/organisms/MobileMenu'
 import { NAV_LINKS } from '@/data/navigation'
+import { RESUME_URL } from '@/data/links'
 
 export function SiteHeader() {
   return (
@@ -14,12 +15,12 @@ export function SiteHeader() {
       <div className='mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-6'>
         <Link
           href='/'
-          aria-label="D'Nova — home"
+          aria-label='Rayce Ramsay — home'
           className='text-foreground hover:text-foreground-muted focus-visible:ring-foreground flex items-center gap-2 rounded-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none'
         >
-          <Bird size={22} aria-hidden='true' />
+          <Code2 size={22} aria-hidden='true' />
           <span className='text-sm font-semibold tracking-tight'>
-            D&apos;Nova
+            Rayce Ramsay
           </span>
         </Link>
 
@@ -33,7 +34,9 @@ export function SiteHeader() {
 
         <div className='hidden md:block'>
           <Button variant='pill' size='sm' asChild>
-            <Link href='#contact'>Book A Call</Link>
+            <a href={RESUME_URL} target='_blank' rel='noopener noreferrer'>
+              View Resume
+            </a>
           </Button>
         </div>
 
