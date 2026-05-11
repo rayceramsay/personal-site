@@ -48,7 +48,7 @@ export function HeroSection() {
         <div className='relative order-first md:order-last'>
           <div className='bg-surface relative aspect-4/5 overflow-hidden rounded-3xl'>
             <Image
-              src='/rayce_headshot.png'
+              src='/images/rayce_professional_headshot.png'
               alt='Rayce Ramsay — full stack software engineer'
               fill
               priority

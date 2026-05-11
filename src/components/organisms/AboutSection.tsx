@@ -50,7 +50,7 @@ export function AboutSection() {
         <div className='flex flex-col gap-6'>
           <div className='bg-surface relative aspect-square max-w-xs overflow-hidden rounded-2xl'>
             <Image
-              src='/rayce_headshot.png'
+              src={'/images/rayce_hockey_headshot.jpg'}
               alt='Rayce Ramsay'
               fill
               className='object-cover object-top'
