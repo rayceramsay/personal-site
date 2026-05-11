@@ -6,7 +6,7 @@ export const PROJECT_ITEMS: ProjectItem[] = [
     title: 'JERC Sentry',
     subtitle: 'AI Scam Call Defence',
     description:
-      'Real-time AI inference pipeline using Deepgram and Groq APIs to classify live phone scams with sub-second response latency. Includes an async FastAPI/WebSocket backend with Telnyx integrations, Flutter mobile app with Firebase FCM fraud alerts, and Terraform-automated infrastructure.',
+      'Real-time AI inference pipeline using Deepgram and Groq APIs to classify live phone scams with sub-second response latency. Includes an async FastAPI/WebSocket backend with Telnyx integrations, Flutter mobile app with Firebase FCM fraud alerts for family intervention, and Terraform-automated infrastructure.',
     techStack: [
       'FastAPI',
       'Flutter',
@@ -14,6 +14,7 @@ export const PROJECT_ITEMS: ProjectItem[] = [
       'Terraform',
       'Deepgram',
       'Groq',
+      'Telnyx',
       'Firebase',
       'GitHub Actions',
     ],
