@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   title: 'Rayce Ramsay',
   description:
     'Portfolio of Rayce Ramsay, a full stack software engineer specializing in React, Python (FastAPI), Java (Spring Boot), and cloud infrastructure.',
+  appleWebApp: {
+    title: 'Rayce R',
+    capable: true,
+    statusBarStyle: 'default',
+  },
 }
 
 export default function RootLayout({
@@ -30,9 +35,6 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <head>
-        <meta name='apple-mobile-web-app-title' content='Rayce R' />
-      </head>
       <body className='bg-background text-foreground flex min-h-full flex-col'>
         <ThemeProvider
           attribute='class'
