@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Rayce Ramsay — Full Stack Software Engineer',
+  title: 'Rayce Ramsay',
   description:
-    'Portfolio of Rayce Ramsay, a full stack software engineer specializing in React, FastAPI, Spring Boot, and cloud infrastructure.',
+    'Portfolio of Rayce Ramsay, a full stack software engineer specializing in React, Python (FastAPI), Java (Spring Boot), and cloud infrastructure.',
 }
 
 export default function RootLayout({
