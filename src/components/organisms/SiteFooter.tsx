@@ -6,7 +6,7 @@ import { EMAIL } from '@/data/links'
 export function SiteFooter() {
   return (
     <footer role='contentinfo' className='bg-surface-dark text-background'>
-      <div className='mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 md:flex-row'>
+      <div className='mx-auto flex max-w-6xl flex-col items-start justify-between gap-12 px-6 py-10 md:flex-row md:items-center md:gap-6'>
         <Link
           href='/'
           aria-label='Rayce Ramsay — home'
@@ -19,7 +19,7 @@ export function SiteFooter() {
         </Link>
 
         <nav aria-label='Footer navigation'>
-          <ul className='flex flex-wrap justify-center gap-6'>
+          <ul className='flex flex-col flex-wrap justify-center gap-6 md:flex-row'>
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <Link
