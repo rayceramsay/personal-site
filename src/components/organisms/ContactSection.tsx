@@ -1,6 +1,7 @@
 import { Mail, Globe, GitBranch, FileText } from 'lucide-react'
 import { SectionLabel } from '@/components/atoms/SectionLabel'
 import { SectionHeading } from '@/components/atoms/SectionHeading'
+import { RevealOnScroll } from '@/components/atoms/RevealOnScroll'
 import { RESUME_URL, GITHUB_URL, LINKEDIN_URL, EMAIL } from '@/data/links'
 
 const CONTACT_LINKS = [
@@ -42,7 +43,7 @@ export function ContactSection() {
       className='bg-surface'
     >
       <div className='mx-auto max-w-6xl px-6 py-16 md:py-24'>
-        <div className='mb-10 flex flex-col items-center gap-3 text-center'>
+        <RevealOnScroll className='mb-10 flex flex-col items-center gap-3 text-center'>
           <SectionLabel>Contact</SectionLabel>
           <SectionHeading as='h2' size='lg' id='contact-heading'>
             Open to New Opportunities
@@ -52,9 +53,12 @@ export function ContactSection() {
             software development space. If you have a project or opportunity you
             think I&apos;d be a good fit for, feel free to reach out!
           </p>
-        </div>
+        </RevealOnScroll>
 
-        <div className='mx-auto grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2'>
+        <RevealOnScroll
+          delay={150}
+          className='mx-auto grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2'
+        >
           {CONTACT_LINKS.map(
             ({ icon: Icon, label, display, href, external }) => (
               <a
@@ -84,7 +88,7 @@ export function ContactSection() {
               </a>
             ),
           )}
-        </div>
+        </RevealOnScroll>
       </div>
     </section>
   )

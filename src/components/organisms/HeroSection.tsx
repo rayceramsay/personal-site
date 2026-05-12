@@ -14,7 +14,10 @@ export function HeroSection() {
     >
       <div className='mx-auto grid min-h-[calc(100dvh-var(--header-height))] max-w-6xl grid-cols-1 items-center gap-10 px-6 py-16 md:mb-24 md:grid-cols-2 md:py-0'>
         <div className='flex flex-col gap-6'>
-          <div className='flex gap-8'>
+          <div
+            className='animate-fade-in-up flex gap-8'
+            style={{ animationDelay: '0ms' }}
+          >
             {HERO_STATS.map((stat) => (
               <StatCard key={stat.value} stat={stat} size='sm' />
             ))}
@@ -24,16 +27,23 @@ export function HeroSection() {
             as='h1'
             size='display'
             id='hero-heading'
-            className='font-black'
+            className='animate-fade-in-up font-black'
+            style={{ animationDelay: '100ms' }}
           >
             Hello,
           </SectionHeading>
 
-          <p className='text-foreground-muted text-base italic'>
+          <p
+            className='animate-fade-in-up text-foreground-muted text-base italic'
+            style={{ animationDelay: '200ms' }}
+          >
             — I&apos;m Rayce, a full stack software engineer.
           </p>
 
-          <div className='mt-2 flex flex-wrap gap-3'>
+          <div
+            className='animate-fade-in-up mt-2 flex flex-wrap gap-3'
+            style={{ animationDelay: '300ms' }}
+          >
             <Button variant='primary' size='md' asChild>
               <a href={RESUME_URL} target='_blank' rel='noopener noreferrer'>
                 View Resume
@@ -45,7 +55,10 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className='relative order-first md:order-last'>
+        <div
+          className='animate-fade-in-up relative order-first md:order-last'
+          style={{ animationDelay: '150ms' }}
+        >
           <div className='bg-surface relative aspect-4/5 overflow-hidden rounded-3xl'>
             <Image
               src='/images/rayce_professional_headshot.png'

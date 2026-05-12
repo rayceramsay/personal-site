@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { CheckCircle2 } from 'lucide-react'
 import { SectionHeading } from '@/components/atoms/SectionHeading'
 import { StatCard } from '@/components/molecules/StatCard'
+import { RevealOnScroll } from '@/components/atoms/RevealOnScroll'
 
 const ABOUT_BULLETS = [
   "Varsity Blues Men's Hockey goalie at the University of Toronto.",
@@ -19,7 +20,7 @@ export function AboutSection() {
       className='mx-auto max-w-6xl px-6 py-16 md:py-24'
     >
       <div className='grid grid-cols-1 items-start gap-12 md:grid-cols-2'>
-        <div className='flex flex-col gap-6'>
+        <RevealOnScroll className='flex flex-col gap-6'>
           <SectionHeading as='h2' size='lg' id='about-heading'>
             About Me
           </SectionHeading>
@@ -45,9 +46,12 @@ export function AboutSection() {
           </div>
 
           <StatCard stat={GPA_STAT} size='lg' />
-        </div>
+        </RevealOnScroll>
 
-        <div className='flex flex-col items-center gap-6 md:items-start'>
+        <RevealOnScroll
+          delay={150}
+          className='flex flex-col items-center gap-6 md:items-start'
+        >
           <div className='bg-surface relative aspect-square w-full max-w-xs overflow-hidden rounded-2xl'>
             <Image
               src={'/images/rayce_hockey_headshot.jpg'}
@@ -72,7 +76,7 @@ export function AboutSection() {
               </li>
             ))}
           </ul>
-        </div>
+        </RevealOnScroll>
       </div>
     </section>
   )
