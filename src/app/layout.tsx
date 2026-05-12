@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
+import { ThemeProvider } from 'next-themes'
 import './globals.css'
 
 const geistSans = Geist({
@@ -26,19 +27,27 @@ export default function RootLayout({
   return (
     <html
       lang='en'
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
         <meta name='apple-mobile-web-app-title' content='Rayce R' />
       </head>
       <body className='bg-background text-foreground flex min-h-full flex-col'>
-        <a
-          href='#main-content'
-          className='focus:bg-background focus:text-foreground focus:shadow-card-hover focus:border-border sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:border focus:px-4 focus:py-2'
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
         >
-          Skip to main content
-        </a>
-        {children}
+          <a
+            href='#main-content'
+            className='focus:bg-background focus:text-foreground focus:shadow-card-hover focus:border-border sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:border focus:px-4 focus:py-2'
+          >
+            Skip to main content
+          </a>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

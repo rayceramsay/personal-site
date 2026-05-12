@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/atoms/Button'
+import { ThemeToggle } from '@/components/atoms/ThemeToggle'
 import { NavLink } from '@/components/molecules/NavLink'
 import { MobileMenu } from '@/components/organisms/MobileMenu'
 import { NAV_LINKS } from '@/data/navigation'
@@ -29,6 +30,15 @@ export function SiteHeader() {
             width={22}
             height={22}
             aria-hidden='true'
+            className='block dark:hidden'
+          />
+          <Image
+            src='/images/logo/rayce_logo_transparent-bg-white-font.png'
+            alt=''
+            width={22}
+            height={22}
+            aria-hidden='true'
+            className='hidden dark:block'
           />
           <span className='text-sm font-semibold tracking-tight'>
             Rayce Ramsay
@@ -48,15 +58,17 @@ export function SiteHeader() {
           </ul>
         </nav>
 
-        <div className='hidden md:block'>
-          <Button variant='pill' size='sm' asChild>
-            <a href={RESUME_URL} target='_blank' rel='noopener noreferrer'>
-              View Resume
-            </a>
-          </Button>
+        <div className='flex items-center gap-3'>
+          <div className='hidden md:block'>
+            <Button variant='pill' size='sm' asChild>
+              <a href={RESUME_URL} target='_blank' rel='noopener noreferrer'>
+                View Resume
+              </a>
+            </Button>
+          </div>
+          <ThemeToggle />
+          <MobileMenu links={NAV_LINKS} activeHref={activeHref} />
         </div>
-
-        <MobileMenu links={NAV_LINKS} activeHref={activeHref} />
       </div>
     </header>
   )

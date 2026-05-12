@@ -5,12 +5,12 @@ import { EMAIL } from '@/data/links'
 
 export function SiteFooter() {
   return (
-    <footer role='contentinfo' className='bg-surface-dark text-background'>
+    <footer role='contentinfo' className='bg-surface-dark text-white'>
       <div className='mx-auto flex max-w-6xl flex-col items-start justify-between gap-12 px-6 py-10 md:flex-row md:items-center md:gap-6'>
         <Link
           href='/'
           aria-label='Rayce Ramsay — home'
-          className='text-background hover:text-background/70 focus-visible:ring-background focus-visible:ring-offset-surface-dark flex items-center gap-2 rounded-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none'
+          className='focus-visible:ring-offset-surface-dark flex items-center gap-2 rounded-sm text-white transition-colors hover:text-white/70 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:outline-none'
         >
           <Image
             src='/images/logo/rayce_logo_transparent-bg-white-font.png'
@@ -30,7 +30,7 @@ export function SiteFooter() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className='text-background/70 hover:text-background focus-visible:ring-background focus-visible:ring-offset-surface-dark rounded-sm text-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none'
+                  className='focus-visible:ring-offset-surface-dark rounded-sm text-sm text-white/70 transition-colors hover:text-white focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:outline-none'
                 >
                   {link.label}
                 </Link>
@@ -41,7 +41,7 @@ export function SiteFooter() {
 
         <a
           href={`mailto:${EMAIL}`}
-          className='text-background hover:text-background/70 focus-visible:ring-background focus-visible:ring-offset-surface-dark rounded-sm text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none'
+          className='focus-visible:ring-offset-surface-dark rounded-sm text-sm font-medium text-white transition-colors hover:text-white/70 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:outline-none'
         >
           {EMAIL}
         </a>
