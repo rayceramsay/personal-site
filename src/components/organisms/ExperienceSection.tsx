@@ -13,8 +13,8 @@ export function ExperienceSection() {
       aria-labelledby='experience-heading'
       className='mx-auto max-w-6xl px-6 py-16 md:py-24'
     >
-      <div className='grid grid-cols-1 items-start gap-12 lg:grid-cols-2'>
-        <RevealOnScroll className='flex flex-col gap-5 lg:sticky lg:top-24'>
+      <div className='grid grid-cols-1 items-start gap-12 lg:grid-cols-5'>
+        <RevealOnScroll className='flex flex-col gap-5 lg:sticky lg:top-24 lg:col-span-2'>
           <SectionLabel>Experience</SectionLabel>
           <SectionHeading as='h2' size='lg' id='experience-heading'>
             Work Experience
@@ -32,7 +32,7 @@ export function ExperienceSection() {
           </Button>
         </RevealOnScroll>
 
-        <RevealOnScroll delay={150}>
+        <RevealOnScroll delay={150} className='lg:col-span-3'>
           <ol aria-label='Work experience timeline'>
             {EXPERIENCE_ITEMS.map((item, i) => (
               <ExperienceItem

@@ -16,8 +16,8 @@ export function ExperienceItem({
 }: ExperienceItemProps) {
   return (
     <li className={cn('py-5', className)}>
-      <div className='grid grid-cols-1 items-start gap-2 sm:grid-cols-2 sm:gap-4'>
-        <div>
+      <div className='grid grid-cols-1 items-start gap-2 sm:grid-cols-3 sm:gap-4'>
+        <div className='sm:col-span-1'>
           <p className='text-foreground text-sm font-semibold'>
             {item.company}
           </p>
@@ -26,7 +26,7 @@ export function ExperienceItem({
           </p>
           <p className='text-foreground-muted mt-0.5 text-xs'>{item.period}</p>
         </div>
-        <div>
+        <div className='sm:col-span-2'>
           <p className='text-foreground text-sm font-medium'>{item.role}</p>
           <ul className='mt-1 flex flex-col gap-1'>
             {item.bullets.map((bullet, i) => (
