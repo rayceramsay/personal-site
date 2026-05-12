@@ -22,7 +22,7 @@ export function SkillsSection() {
         {SKILL_CATEGORIES.map((cat, i) => (
           <RevealOnScroll key={cat.id} delay={i * 75}>
             <div
-              className='bg-surface rounded-xl p-5'
+              className='bg-surface h-full rounded-xl p-5'
               aria-label={cat.category}
             >
               <p className='text-foreground mb-3 text-sm font-semibold'>
