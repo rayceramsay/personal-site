@@ -12,6 +12,8 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       'SQL',
       'C',
       'PHP',
+      'HTML5',
+      'CSS',
       'R',
     ],
   },
