@@ -28,6 +28,9 @@ export default function RootLayout({
       lang='en'
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <meta name='apple-mobile-web-app-title' content='Rayce R' />
+      </head>
       <body className='bg-background text-foreground flex min-h-full flex-col'>
         <a
           href='#main-content'
