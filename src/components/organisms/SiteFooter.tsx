@@ -1,5 +1,5 @@
+import Image from 'next/image'
 import Link from 'next/link'
-import { Code2 } from 'lucide-react'
 import { NAV_LINKS } from '@/data/navigation'
 import { EMAIL } from '@/data/links'
 
@@ -12,7 +12,13 @@ export function SiteFooter() {
           aria-label='Rayce Ramsay — home'
           className='text-background hover:text-background/70 focus-visible:ring-background focus-visible:ring-offset-surface-dark flex items-center gap-2 rounded-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none'
         >
-          <Code2 size={22} aria-hidden='true' />
+          <Image
+            src='/images/logo/rayce_logo_transparent-bg-white-font.png'
+            alt=''
+            width={22}
+            height={22}
+            aria-hidden='true'
+          />
           <span className='text-sm font-semibold tracking-tight'>
             Rayce Ramsay
           </span>

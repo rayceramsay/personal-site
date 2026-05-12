@@ -1,7 +1,7 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
-import { Code2 } from 'lucide-react'
 import { Button } from '@/components/atoms/Button'
 import { NavLink } from '@/components/molecules/NavLink'
 import { MobileMenu } from '@/components/organisms/MobileMenu'
@@ -23,7 +23,13 @@ export function SiteHeader() {
           aria-label='Rayce Ramsay — home'
           className='text-foreground hover:text-foreground-muted focus-visible:ring-foreground flex items-center gap-2 rounded-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none'
         >
-          <Code2 size={22} aria-hidden='true' />
+          <Image
+            src='/images/logo/rayce_logo_transparent-bg-blue-font.png'
+            alt=''
+            width={22}
+            height={22}
+            aria-hidden='true'
+          />
           <span className='text-sm font-semibold tracking-tight'>
             Rayce Ramsay
           </span>
