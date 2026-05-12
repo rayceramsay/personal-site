@@ -36,7 +36,7 @@ export function MobileMenu({ links, activeHref }: MobileMenuProps) {
         aria-modal='true'
         aria-label='Navigation menu'
         aria-hidden={!isOpen}
-        className={`bg-background border-border fixed top-(--header-height) left-0 z-40 flex w-full flex-col items-center justify-center gap-10 border-t px-6 pt-8 pb-16 transition-[visibility,opacity] duration-300 ease-in-out md:hidden ${
+        className={`bg-background border-border fixed top-(--header-height) left-0 z-40 flex w-full flex-col items-center justify-center gap-10 border-t border-b px-6 pt-8 pb-16 transition-[visibility,opacity] duration-300 ease-in-out md:hidden ${
           isOpen ? 'visible opacity-100' : 'invisible opacity-0'
         }`}
       >
