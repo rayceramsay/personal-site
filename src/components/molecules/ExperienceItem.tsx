@@ -16,7 +16,7 @@ export function ExperienceItem({
 }: ExperienceItemProps) {
   return (
     <li className={cn('py-5', className)}>
-      <div className='grid grid-cols-2 items-start gap-4'>
+      <div className='grid grid-cols-1 items-start gap-2 sm:grid-cols-2 sm:gap-4'>
         <div>
           <p className='text-foreground text-sm font-semibold'>
             {item.company}
