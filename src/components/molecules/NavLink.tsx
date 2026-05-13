@@ -22,6 +22,7 @@ interface NavLinkProps extends VariantProps<typeof navLinkVariants> {
   label: string
   className?: string
   onClick?: () => void
+  tabIndex?: number
 }
 
 export function NavLink({
@@ -30,6 +31,7 @@ export function NavLink({
   isActive,
   className,
   onClick,
+  tabIndex = 0,
 }: NavLinkProps) {
   function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
     const id = href.startsWith('#') ? href.slice(1) : null
@@ -55,6 +57,7 @@ export function NavLink({
         href={href}
         className={cn(navLinkVariants({ isActive }), className)}
         onClick={handleClick}
+        tabIndex={tabIndex}
       >
         {label}
       </Link>

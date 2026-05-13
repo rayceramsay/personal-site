@@ -4,11 +4,12 @@ import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
 import { useNavMenu } from '@/hooks/useNavMenu'
 import { Button } from '@/components/atoms/Button'
-import type { NavLink } from '@/types/portfolio'
+import type { NavLink as NavLinkType } from '@/types/portfolio'
 import { RESUME_URL } from '@/data/links'
+import { NavLink } from '../molecules/NavLink'
 
 interface MobileMenuProps {
-  links: NavLink[]
+  links: NavLinkType[]
   activeHref?: string
 }
 
@@ -43,20 +44,18 @@ export function MobileMenu({ links, activeHref }: MobileMenuProps) {
         <nav aria-label='Mobile navigation'>
           <ul className='flex flex-col items-center gap-2'>
             {links.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  onClick={close}
-                  tabIndex={isOpen ? 0 : -1}
-                  className={`focus-visible:ring-foreground block rounded-sm px-4 py-3 text-2xl font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none ${
-                    activeHref === link.href
-                      ? 'text-foreground underline underline-offset-4'
-                      : 'text-foreground hover:text-foreground-muted'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              </li>
+              <NavLink
+                key={link.href}
+                href={link.href}
+                label={link.label}
+                onClick={close}
+                tabIndex={isOpen ? 0 : -1}
+                className={`focus-visible:ring-foreground block rounded-sm px-4 py-3 text-2xl font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none ${
+                  activeHref === link.href
+                    ? 'text-foreground underline underline-offset-4'
+                    : 'text-foreground hover:text-foreground-muted'
+                }`}
+              />
             ))}
           </ul>
         </nav>
