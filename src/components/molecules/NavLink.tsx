@@ -37,8 +37,12 @@ export function NavLink({
       const target = document.getElementById(id)
       if (target) {
         e.preventDefault()
-        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-        target.scrollIntoView({ behavior: reducedMotion ? 'instant' : 'smooth' })
+        const reducedMotion = window.matchMedia(
+          '(prefers-reduced-motion: reduce)',
+        ).matches
+        target.scrollIntoView({
+          behavior: reducedMotion ? 'instant' : 'smooth',
+        })
         history.pushState(null, '', href)
       }
     }
