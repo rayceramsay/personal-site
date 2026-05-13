@@ -25,7 +25,7 @@ export function SiteHeader() {
           className='text-foreground hover:text-foreground-muted focus-visible:ring-foreground flex items-center gap-2 rounded-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none'
         >
           <Image
-            src='/images/logo/rayce_logo_transparent-bg-blue-font.png'
+            src='/images/logo/rayce_logo_transparent-bg-black-font.png'
             alt=''
             width={22}
             height={22}
