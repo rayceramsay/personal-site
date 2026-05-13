@@ -1,12 +1,17 @@
 'use client'
 
+import { useIsMounted } from '@/hooks/useIsMounted'
 import { Sun, Moon } from 'lucide-react'
 import { useTheme } from 'next-themes'
 
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme()
+  const mounted = useIsMounted()
 
-  if (!resolvedTheme) return <div className='h-10 w-10' />
+  // Waiting for the component to be mounted is necessary because the theme is only
+  // known on the client, so we want to render a placeholder on the server to avoid a
+  // mismatch (which would cause the page to flash white on initial load).
+  if (!mounted) return <div className='h-10 w-10' />
 
   const isDark = resolvedTheme === 'dark'
 
