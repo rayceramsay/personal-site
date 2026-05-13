@@ -2,7 +2,7 @@
 
 Personal portfolio and resume site for Rayce Ramsay. Built to showcase software development experience to potential employers.
 
-**Live site:** [rayceramsay.ca](https://rayceramsay.ca)
+**Live site: [rayceramsay.ca](https://rayceramsay.ca)**
 
 ## Tech Stack
 
@@ -27,8 +27,8 @@ src/
 
 ```bash
 # Clone the repo
-git clone https://github.com/rayceramsay/personal-site.git
-cd personal-site
+git clone https://github.com/rayceramsay/rayceramsay.ca.git
+cd rayceramsay.ca
 
 # Install dependencies
 npm install

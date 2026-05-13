@@ -1,4 +1,4 @@
-# Rayce Ramsay Personal Portfolio/Resume Site
+# Rayce Ramsay Portfolio Site
 
 This is a resume/portfolio website for Rayce Ramsay (a recent computer science grad) to demonstrate his software development background to potential employers.
 
