@@ -18,6 +18,12 @@ export function MobileMenu({ links, activeHref }: MobileMenuProps) {
 
   return (
     <>
+      <div
+        aria-hidden='true'
+        className={`bg-background/70 fixed top-(--header-height) left-0 z-30 h-[calc(100vh-var(--header-height))] w-screen transition-[visibility,opacity] duration-300 ease-in-out md:hidden ${isOpen ? 'visible opacity-100' : 'invisible opacity-0'}`}
+        onClick={close}
+      />
+
       <button
         type='button'
         onClick={toggle}
@@ -31,13 +37,12 @@ export function MobileMenu({ links, activeHref }: MobileMenuProps) {
           <Menu size={20} aria-hidden='true' />
         )}
       </button>
-
       <div
         role='dialog'
         aria-modal='true'
         aria-label='Navigation menu'
         aria-hidden={!isOpen}
-        className={`bg-background border-border fixed top-(--header-height) left-0 z-40 flex w-full flex-col items-center justify-center gap-10 border-t border-b px-6 pt-8 pb-16 transition-[visibility,opacity] duration-300 ease-in-out md:hidden ${
+        className={`bg-background border-border fixed top-(--header-height) left-0 z-40 flex w-full flex-col items-center justify-center gap-10 border-t border-b-2 px-6 pt-8 pb-16 transition-[visibility,opacity] duration-300 ease-in-out md:hidden ${
           isOpen ? 'visible opacity-100' : 'invisible opacity-0'
         }`}
       >
