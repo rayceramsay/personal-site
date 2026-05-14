@@ -1,9 +1,14 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { NAV_LINKS } from '@/data/navigation'
 import { EMAIL } from '@/data/links'
+import { useSmoothScrollToHash } from '@/hooks/useSmoothScrollToHash'
 
 export function SiteFooter() {
+  const smoothScrollToHash = useSmoothScrollToHash()
+
   return (
     <footer role='contentinfo' className='bg-surface-dark text-white'>
       <div className='mx-auto flex max-w-6xl flex-col items-start justify-between gap-12 px-6 py-10 md:flex-row md:items-center md:gap-6'>
@@ -30,6 +35,7 @@ export function SiteFooter() {
               <li key={link.href}>
                 <Link
                   href={link.href}
+                  onClick={(e) => smoothScrollToHash(e, link.href)}
                   className='focus-visible:ring-offset-surface-dark rounded-sm text-sm text-white/70 transition-colors hover:text-white focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:outline-none'
                 >
                   {link.label}
