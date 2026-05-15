@@ -1,10 +1,8 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
 import { NAV_LINKS } from '@/data/navigation'
 import { EMAIL } from '@/data/links'
-import { smoothScrollToHash } from '@/lib/smoothScrollToHash'
+import { SmoothScrollLink } from '@/components/atoms/SmoothScrollLink'
 
 export function SiteFooter() {
   return (
@@ -31,13 +29,12 @@ export function SiteFooter() {
           <ul className='flex flex-col flex-wrap justify-center gap-6 md:flex-row'>
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <Link
+                <SmoothScrollLink
                   href={link.href}
-                  onClick={(e) => smoothScrollToHash(e, link.href)}
                   className='focus-visible:ring-offset-surface-dark rounded-sm text-sm text-white/70 transition-colors hover:text-white focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:outline-none'
                 >
                   {link.label}
-                </Link>
+                </SmoothScrollLink>
               </li>
             ))}
           </ul>
