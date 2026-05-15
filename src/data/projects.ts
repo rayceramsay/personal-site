@@ -20,6 +20,7 @@ export const PROJECT_ITEMS: ProjectItem[] = [
     ],
     demoUrl: 'https://jerc-beta.pages.dev',
     demoLabel: 'Documentation',
+    media: [],
   },
   {
     id: '2',
@@ -29,6 +30,7 @@ export const PROJECT_ITEMS: ProjectItem[] = [
       'FastAPI-based clinical decision support system predicting drug-drug interaction risks from structured patient data. Python ETL pipelines normalize five medical datasets into PostgreSQL, with a React dashboard and AWS ECS/RDS/S3 infrastructure provisioned via Terraform.',
     techStack: ['FastAPI', 'React', 'AWS', 'Terraform', 'PostgreSQL', 'Python'],
     githubUrl: 'https://github.com/UofT-CSC490-F2025/AIDoctors',
+    media: [],
   },
   {
     id: '3',
@@ -37,6 +39,7 @@ export const PROJECT_ITEMS: ProjectItem[] = [
     description:
       'Full-stack e-commerce platform with Stripe payment integration and a custom CMS for inventory and order management. Migrated a legacy PHP monolith to a decoupled React and REST API architecture, improving scalability and maintainability.',
     techStack: ['React', 'TailwindCSS', 'PHP', 'MySQL', 'Docker', 'Stripe'],
+    media: [],
   },
   {
     id: '4',
@@ -46,6 +49,7 @@ export const PROJECT_ITEMS: ProjectItem[] = [
       'Playwright automation tool with a PyQt6 desktop GUI to secure high-demand university activity bookings within seconds of their release. Integrates native OS schedulers and SQLite to automate registrations at precise intervals, consistently beating 30-second sell-out windows.',
     techStack: ['Python', 'Playwright', 'SQLite', 'PyQt6'],
     githubUrl: 'https://github.com/ethanmcf/UofTBookingBot',
+    media: [],
   },
   {
     id: '5',
@@ -56,6 +60,7 @@ export const PROJECT_ITEMS: ProjectItem[] = [
     techStack: ['R', 'Tidyverse', 'ggplot2', 'Machine Learning'],
     demoUrl: 'https://rayceramsay.github.io/nhl-goalie-height-analysis/',
     demoLabel: 'Analysis',
+    media: [],
   },
   {
     id: '6',
@@ -66,6 +71,7 @@ export const PROJECT_ITEMS: ProjectItem[] = [
     techStack: ['Java', 'SQLite', 'JUnit', 'Git'],
     githubUrl:
       'https://github.com/rayceramsay/music-trivia/tree/post-semester-revision',
+    media: [],
   },
   {
     id: '7',
@@ -75,6 +81,7 @@ export const PROJECT_ITEMS: ProjectItem[] = [
       'React/Next.js analytics dashboard backed by PostgreSQL and GraphQL, enabling a nonprofit to track KPIs and accelerate decision-making by 33% through dynamic filters and interactive charts.',
     techStack: ['TypeScript', 'React', 'Next.js', 'PostgreSQL', 'GraphQL'],
     githubUrl: 'https://github.com/onyx-initiative/onyx/pull/96',
+    media: [],
   },
   {
     id: '8',
@@ -85,5 +92,6 @@ export const PROJECT_ITEMS: ProjectItem[] = [
     techStack: ['HTML5', 'CSS', 'JavaScript', 'Express', 'Vite'],
     demoUrl: 'https://likeitordumpit.ca',
     demoLabel: 'Live Site',
+    media: [],
   },
 ]

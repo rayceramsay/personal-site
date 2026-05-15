@@ -1,5 +1,10 @@
+'use client'
+
 import { GitBranch, ExternalLink } from 'lucide-react'
+import { ProjectMediaHero } from '@/components/atoms/ProjectMediaHero'
 import { Tag } from '@/components/atoms/Tag'
+import { ProjectMediaLightbox } from '@/components/molecules/ProjectMediaLightbox'
+import { useProjectMediaGallery } from '@/hooks/useProjectMediaGallery'
 import { cn } from '@/lib/utils'
 import type { ProjectItem } from '@/types/portfolio'
 
@@ -10,6 +15,8 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, className }: ProjectCardProps) {
   const hasLinks = project.githubUrl || project.demoUrl
+  const media = project.media ?? []
+  const gallery = useProjectMediaGallery({ count: media.length })
 
   return (
     <article
@@ -18,6 +25,12 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
         className,
       )}
     >
+      <ProjectMediaHero
+        media={media}
+        projectTitle={project.title}
+        onActivate={() => gallery.openAt(0)}
+      />
+
       <div className='border-foreground bg-surface border-t-2 px-5 py-4'>
         <h3 className='text-foreground text-base leading-tight font-bold'>
           {project.title}
@@ -67,6 +80,19 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
           </div>
         )}
       </div>
+
+      {media.length > 0 && (
+        <ProjectMediaLightbox
+          media={media}
+          projectTitle={project.title}
+          open={gallery.open}
+          onOpenChange={gallery.setOpen}
+          activeIndex={gallery.activeIndex}
+          onSelect={gallery.openAt}
+          onNext={gallery.next}
+          onPrev={gallery.prev}
+        />
+      )}
     </article>
   )
 }

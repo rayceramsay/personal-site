@@ -18,6 +18,17 @@ export interface ExperienceItem {
   skills: string[]
 }
 
+export type ProjectMediaType = 'image' | 'video'
+
+export interface ProjectMedia {
+  type: ProjectMediaType
+  src: string
+  alt: string
+  poster?: string
+  width?: number
+  height?: number
+}
+
 export interface ProjectItem {
   id: string
   title: string
@@ -27,6 +38,7 @@ export interface ProjectItem {
   githubUrl?: string
   demoUrl?: string
   demoLabel?: string
+  media?: ProjectMedia[]
 }
 
 export interface SkillCategory {
