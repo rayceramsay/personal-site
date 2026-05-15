@@ -49,7 +49,7 @@ export function AboutSection() {
         </RevealOnScroll>
 
         <RevealOnScroll
-          delay={150}
+          delay={100}
           className='flex flex-col items-center gap-6 md:items-start'
         >
           <div className='bg-surface relative aspect-square w-full max-w-xs overflow-hidden rounded-2xl'>
