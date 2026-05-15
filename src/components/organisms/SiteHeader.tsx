@@ -48,12 +48,13 @@ export function SiteHeader() {
         <nav aria-label='Main navigation' className='hidden md:block'>
           <ul className='flex items-center gap-7'>
             {NAV_LINKS.map((link) => (
-              <NavLink
-                key={link.href}
-                href={link.href}
-                label={link.label}
-                isActive={activeHref === link.href}
-              />
+              <li key={link.href}>
+                <NavLink
+                  href={link.href}
+                  label={link.label}
+                  isActive={activeHref === link.href}
+                />
+              </li>
             ))}
           </ul>
         </nav>

@@ -20,7 +20,7 @@ export function SkillsSection() {
 
       <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3'>
         {SKILL_CATEGORIES.map((cat, i) => (
-          <RevealOnScroll key={cat.id} delay={i * 75}>
+          <RevealOnScroll key={cat.id} delay={i * 50}>
             <div
               className='bg-surface h-full rounded-xl p-5'
               aria-label={cat.category}

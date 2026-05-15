@@ -49,18 +49,19 @@ export function MobileMenu({ links, activeHref }: MobileMenuProps) {
         <nav aria-label='Mobile navigation'>
           <ul className='flex flex-col items-center gap-2'>
             {links.map((link) => (
-              <NavLink
-                key={link.href}
-                href={link.href}
-                label={link.label}
-                onClick={close}
-                tabIndex={isOpen ? 0 : -1}
-                className={`focus-visible:ring-foreground block rounded-sm px-4 py-3 text-2xl font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none ${
-                  activeHref === link.href
-                    ? 'text-foreground underline underline-offset-4'
-                    : 'text-foreground hover:text-foreground-muted'
-                }`}
-              />
+              <li key={link.href}>
+                <NavLink
+                  href={link.href}
+                  label={link.label}
+                  onClick={close}
+                  tabIndex={isOpen ? 0 : -1}
+                  className={`focus-visible:ring-foreground block rounded-sm px-4 py-3 text-2xl font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none ${
+                    activeHref === link.href
+                      ? 'text-foreground underline underline-offset-4'
+                      : 'text-foreground hover:text-foreground-muted'
+                  }`}
+                />
+              </li>
             ))}
           </ul>
         </nav>

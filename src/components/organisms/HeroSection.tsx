@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { SectionHeading } from '@/components/atoms/SectionHeading'
 import { Button } from '@/components/atoms/Button'
 import { StatCard } from '@/components/molecules/StatCard'
 import { HERO_STATS } from '@/data/navigation'
 import { RESUME_URL } from '@/data/links'
+import { SmoothScrollLink } from '@/components/atoms/SmoothScrollLink'
 
 export function HeroSection() {
   return (
@@ -50,7 +50,7 @@ export function HeroSection() {
               </a>
             </Button>
             <Button variant='outline' size='md' asChild>
-              <Link href='#contact'>Get in Touch</Link>
+              <SmoothScrollLink href='#contact'>Get in Touch</SmoothScrollLink>
             </Button>
           </div>
         </div>
