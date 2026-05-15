@@ -79,6 +79,7 @@ export function ProjectMediaLightbox({
               aria-label={current.alt}
               controls
               autoPlay
+              muted={current.muted}
               playsInline
               className='h-full w-full object-contain'
             />

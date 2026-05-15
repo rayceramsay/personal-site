@@ -25,6 +25,7 @@ export interface ProjectMedia {
   src: string
   alt: string
   poster?: string
+  muted?: boolean
   width?: number
   height?: number
 }
