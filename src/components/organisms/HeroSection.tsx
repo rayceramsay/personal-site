@@ -66,7 +66,6 @@ export function HeroSection() {
               alt='Rayce Ramsay — full stack software engineer'
               fill
               priority
-              placeholder='blur'
               className='object-cover object-top'
               sizes='(max-width: 768px) 100vw, 50vw'
             />
