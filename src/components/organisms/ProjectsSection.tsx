@@ -17,6 +17,10 @@ export function ProjectsSection() {
           <SectionHeading as='h2' size='lg' id='projects-heading'>
             Things I&apos;ve Built
           </SectionHeading>
+          <p className='text-foreground-muted text-sm leading-relaxed'>
+            Click on any project&apos;s image to explore available demos and
+            screenshots.
+          </p>
         </RevealOnScroll>
 
         <div className='grid grid-cols-1 gap-6 sm:grid-cols-2'>
