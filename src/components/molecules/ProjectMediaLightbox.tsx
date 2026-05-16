@@ -9,6 +9,7 @@ import {
   DialogDescription,
   DialogTitle,
 } from '@/components/atoms/Dialog'
+import { useSwipe } from '@/hooks/useSwipe'
 import { cn } from '@/lib/utils'
 import type { ProjectMedia } from '@/types/portfolio'
 
@@ -34,6 +35,10 @@ export function ProjectMediaLightbox({
   onPrev,
 }: ProjectMediaLightboxProps) {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
+  const swipeHandlers = useSwipe({
+    onSwipeLeft: onNext,
+    onSwipeRight: onPrev,
+  })
 
   useEffect(() => {
     videoRefs.current.forEach((video, index) => {
@@ -75,7 +80,11 @@ export function ProjectMediaLightbox({
           to close.
         </DialogDescription>
 
-        <div className='bg-surface relative flex flex-1 items-center justify-center overflow-hidden rounded-xl'>
+        <div
+          className='bg-surface relative flex flex-1 items-center justify-center overflow-hidden rounded-xl'
+          onTouchStart={hasMultiple ? swipeHandlers.onTouchStart : undefined}
+          onTouchEnd={hasMultiple ? swipeHandlers.onTouchEnd : undefined}
+        >
           {media.map((item, index) => {
             const isActive = index === activeIndex
             return (
