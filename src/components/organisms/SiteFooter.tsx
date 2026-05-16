@@ -19,7 +19,6 @@ export function SiteFooter() {
             alt=''
             width={22}
             height={22}
-            placeholder='blur'
             aria-hidden='true'
           />
           <span className='text-sm font-semibold tracking-tight'>
