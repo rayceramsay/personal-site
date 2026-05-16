@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import logoWhite from '@/assets/images/logo/rayce_logo_transparent-bg-white-font.png'
 import { NAV_LINKS } from '@/data/navigation'
 import { EMAIL } from '@/data/links'
 import { SmoothScrollLink } from '@/components/atoms/SmoothScrollLink'
@@ -14,10 +15,11 @@ export function SiteFooter() {
           className='focus-visible:ring-offset-surface-dark flex items-center gap-2 rounded-sm text-white transition-colors hover:text-white/70 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:outline-none'
         >
           <Image
-            src='/images/logo/rayce_logo_transparent-bg-white-font.png'
+            src={logoWhite}
             alt=''
             width={22}
             height={22}
+            placeholder='blur'
             aria-hidden='true'
           />
           <span className='text-sm font-semibold tracking-tight'>

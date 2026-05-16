@@ -64,10 +64,11 @@ export function ProjectMediaLightbox({
         <div className='bg-surface relative flex flex-1 items-center justify-center overflow-hidden rounded-xl'>
           {current.type === 'image' ? (
             <Image
-              key={current.src}
+              key={current.src.src}
               src={current.src}
               alt={current.alt}
               fill
+              placeholder='blur'
               sizes='90vw'
               className='object-contain'
             />
@@ -75,7 +76,7 @@ export function ProjectMediaLightbox({
             <video
               key={current.src}
               src={current.src}
-              poster={current.poster}
+              poster={current.poster.src}
               aria-label={current.alt}
               controls
               autoPlay
@@ -111,13 +112,13 @@ export function ProjectMediaLightbox({
           <div
             role='tablist'
             aria-label={`${projectTitle} media thumbnails`}
-            className='flex gap-2 overflow-x-auto pb-1'
+            className='flex gap-2 overflow-x-auto p-1'
           >
             {media.map((item, index) => {
               const isActive = index === activeIndex
               return (
                 <button
-                  key={`${item.src}-${index}`}
+                  key={index}
                   type='button'
                   role='tab'
                   aria-selected={isActive}
@@ -135,13 +136,14 @@ export function ProjectMediaLightbox({
                       src={item.src}
                       alt=''
                       fill
+                      placeholder='blur'
                       sizes='80px'
                       className='object-cover'
                     />
                   ) : (
                     <video
                       src={item.src}
-                      poster={item.poster}
+                      poster={item.poster.src}
                       muted
                       playsInline
                       preload='metadata'

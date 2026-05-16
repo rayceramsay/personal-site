@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { CheckCircle2 } from 'lucide-react'
+import hockeyHeadshot from '@/assets/images/rayce_hockey_headshot.jpg'
 import { SectionHeading } from '@/components/atoms/SectionHeading'
 import { StatCard } from '@/components/molecules/StatCard'
 import { RevealOnScroll } from '@/components/atoms/RevealOnScroll'
@@ -54,9 +55,10 @@ export function AboutSection() {
         >
           <div className='bg-surface relative aspect-square w-full max-w-xs overflow-hidden rounded-2xl'>
             <Image
-              src={'/images/rayce_hockey_headshot.jpg'}
+              src={hockeyHeadshot}
               alt='Rayce Ramsay'
               fill
+              placeholder='blur'
               className='object-cover object-top'
               sizes='(max-width: 768px) 100vw, 320px'
             />

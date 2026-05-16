@@ -18,17 +18,17 @@ export interface ExperienceItem {
   skills: string[]
 }
 
-export type ProjectMediaType = 'image' | 'video'
+import type { StaticImageData } from 'next/image'
 
-export interface ProjectMedia {
-  type: ProjectMediaType
-  src: string
-  alt: string
-  poster?: string
-  muted?: boolean
-  width?: number
-  height?: number
-}
+export type ProjectMedia =
+  | { type: 'image'; src: StaticImageData; alt: string }
+  | {
+      type: 'video'
+      src: string
+      alt: string
+      poster: StaticImageData
+      muted?: boolean
+    }
 
 export interface ProjectItem {
   id: string
