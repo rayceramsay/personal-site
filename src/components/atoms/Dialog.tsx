@@ -19,7 +19,7 @@ export function DialogOverlay({ className, ...props }: DialogOverlayProps) {
   return (
     <DialogPrimitive.Overlay
       className={cn(
-        'bg-foreground/80 fixed inset-0 z-50 backdrop-blur-sm',
+        'bg-surface-dark/70 dark:bg-surface/70 fixed inset-0 z-50 backdrop-blur-sm',
         className,
       )}
       {...props}
