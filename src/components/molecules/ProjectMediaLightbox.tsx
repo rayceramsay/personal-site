@@ -103,6 +103,7 @@ export function ProjectMediaLightbox({
                     }}
                     src={item.src}
                     aria-label={item.alt}
+                    poster={`/_next/image?url=${encodeURIComponent(item.poster.src)}&w=1080&q=75`}
                     controls
                     muted={item.muted}
                     playsInline
