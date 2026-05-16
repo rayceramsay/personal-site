@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useEffect, useRef } from 'react'
 import {
   Dialog,
   DialogContent,
@@ -32,9 +33,22 @@ export function ProjectMediaLightbox({
   onNext,
   onPrev,
 }: ProjectMediaLightboxProps) {
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
+
+  useEffect(() => {
+    videoRefs.current.forEach((video, index) => {
+      if (!video) return
+      if (index === activeIndex) {
+        void video.play().catch(() => {})
+      } else {
+        video.pause()
+        video.currentTime = 0
+      }
+    })
+  }, [activeIndex, open])
+
   if (media.length === 0) return null
 
-  const current = media[activeIndex] ?? media[0]
   const hasMultiple = media.length > 1
 
   return (
@@ -62,29 +76,43 @@ export function ProjectMediaLightbox({
         </DialogDescription>
 
         <div className='bg-surface relative flex flex-1 items-center justify-center overflow-hidden rounded-xl'>
-          {current.type === 'image' ? (
-            <Image
-              key={current.src.src}
-              src={current.src}
-              alt={current.alt}
-              fill
-              placeholder='blur'
-              sizes='90vw'
-              className='object-contain'
-            />
-          ) : (
-            <video
-              key={current.src}
-              src={current.src}
-              poster={current.poster.src}
-              aria-label={current.alt}
-              controls
-              autoPlay
-              muted={current.muted}
-              playsInline
-              className='h-full w-full object-contain'
-            />
-          )}
+          {media.map((item, index) => {
+            const isActive = index === activeIndex
+            return (
+              <div
+                key={index}
+                aria-hidden={!isActive}
+                className={cn(
+                  'absolute inset-0 flex items-center justify-center',
+                  isActive ? 'opacity-100' : 'pointer-events-none opacity-0',
+                )}
+              >
+                {item.type === 'image' ? (
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    placeholder='blur'
+                    sizes='90vw'
+                    className='object-contain'
+                  />
+                ) : (
+                  <video
+                    ref={(el) => {
+                      videoRefs.current[index] = el
+                    }}
+                    src={item.src}
+                    aria-label={item.alt}
+                    controls
+                    muted={item.muted}
+                    playsInline
+                    preload='metadata'
+                    className='h-full w-full object-contain focus:outline-none'
+                  />
+                )}
+              </div>
+            )
+          })}
 
           {hasMultiple && (
             <>
@@ -131,25 +159,14 @@ export function ProjectMediaLightbox({
                       : 'opacity-60 hover:opacity-100',
                   )}
                 >
-                  {item.type === 'image' ? (
-                    <Image
-                      src={item.src}
-                      alt=''
-                      fill
-                      placeholder='blur'
-                      sizes='80px'
-                      className='object-cover'
-                    />
-                  ) : (
-                    <video
-                      src={item.src}
-                      poster={item.poster.src}
-                      muted
-                      playsInline
-                      preload='metadata'
-                      className='h-full w-full object-cover'
-                    />
-                  )}
+                  <Image
+                    src={item.type === 'image' ? item.src : item.poster}
+                    alt=''
+                    fill
+                    placeholder='blur'
+                    sizes='80px'
+                    className='object-cover'
+                  />
                 </button>
               )
             })}
