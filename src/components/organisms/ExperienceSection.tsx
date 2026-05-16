@@ -32,7 +32,7 @@ export function ExperienceSection() {
           </Button>
         </RevealOnScroll>
 
-        <RevealOnScroll delay={100} className='lg:col-span-3'>
+        <RevealOnScroll className='lg:col-span-3'>
           <ol aria-label='Work experience timeline'>
             {EXPERIENCE_ITEMS.map((item, i) => (
               <ExperienceItem
