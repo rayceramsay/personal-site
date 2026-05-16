@@ -1,4 +1,6 @@
-import { Mail, Globe, GitBranch, FileText } from 'lucide-react'
+import { Mail, FileText } from 'lucide-react'
+import { GithubIcon } from '@/components/atoms/GithubIcon'
+import { LinkedinIcon } from '@/components/atoms/LinkedinIcon'
 import { SectionLabel } from '@/components/atoms/SectionLabel'
 import { SectionHeading } from '@/components/atoms/SectionHeading'
 import { RevealOnScroll } from '@/components/atoms/RevealOnScroll'
@@ -13,14 +15,14 @@ const CONTACT_LINKS = [
     external: false,
   },
   {
-    icon: Globe,
+    icon: LinkedinIcon,
     label: 'LinkedIn',
     display: 'linkedin.com/in/rayceramsay',
     href: LINKEDIN_URL,
     external: true,
   },
   {
-    icon: GitBranch,
+    icon: GithubIcon,
     label: 'GitHub',
     display: 'github.com/rayceramsay',
     href: GITHUB_URL,

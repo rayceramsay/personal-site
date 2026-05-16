@@ -1,6 +1,7 @@
 'use client'
 
-import { GitBranch, ExternalLink } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
+import { GithubIcon } from '@/components/atoms/GithubIcon'
 import { ProjectMediaHero } from '@/components/atoms/ProjectMediaHero'
 import { Tag } from '@/components/atoms/Tag'
 import { ProjectMediaLightbox } from '@/components/molecules/ProjectMediaLightbox'
@@ -61,7 +62,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
                 aria-label={`View ${project.title} source code on GitHub`}
                 className='text-foreground-muted hover:text-foreground focus-visible:ring-foreground inline-flex items-center gap-1.5 rounded-sm text-xs font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none'
               >
-                <GitBranch size={14} aria-hidden='true' />
+                <GithubIcon size={14} aria-hidden='true' />
                 GitHub
               </a>
             )}

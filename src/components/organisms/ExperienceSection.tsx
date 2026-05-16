@@ -1,3 +1,4 @@
+import { GithubIcon } from '@/components/atoms/GithubIcon'
 import { SectionLabel } from '@/components/atoms/SectionLabel'
 import { SectionHeading } from '@/components/atoms/SectionHeading'
 import { Button } from '@/components/atoms/Button'
@@ -25,8 +26,9 @@ export function ExperienceSection() {
             deployments, and maintaining high test coverage under real
             engineering constraints.
           </p>
-          <Button variant='outline' size='md' asChild>
+          <Button variant='outline' size='md' className='gap-2' asChild>
             <a href={GITHUB_URL} target='_blank' rel='noopener noreferrer'>
+              <GithubIcon size={16} aria-hidden='true' />
               View GitHub
             </a>
           </Button>
