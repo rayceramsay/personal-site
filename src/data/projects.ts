@@ -1,4 +1,19 @@
 import type { ProjectItem } from '@/types/portfolio'
+import project1Poster from '@/assets/images/projects/1/poster.png'
+import project1Content1 from '@/assets/images/projects/1/content1.png'
+import project1Content2 from '@/assets/images/projects/1/content2.png'
+import project2Poster from '@/assets/images/projects/2/poster.png'
+import project3Poster from '@/assets/images/projects/3/poster.png'
+import project4Poster from '@/assets/images/projects/4/poster.png'
+import project4Content1 from '@/assets/images/projects/4/content1.png'
+import project4Content2 from '@/assets/images/projects/4/content2.png'
+import project4Content3 from '@/assets/images/projects/4/content3.png'
+import project5Poster from '@/assets/images/projects/5/poster.png'
+import project6Poster from '@/assets/images/projects/6/poster.png'
+import project7Content1 from '@/assets/images/projects/7/content1.png'
+import project7Content2 from '@/assets/images/projects/7/content2.png'
+import project7Content3 from '@/assets/images/projects/7/content3.png'
+import project8Poster from '@/assets/images/projects/8/poster.png'
 
 export const PROJECT_ITEMS: ProjectItem[] = [
   {
@@ -26,21 +41,21 @@ export const PROJECT_ITEMS: ProjectItem[] = [
         type: 'video',
         src: '/videos/projects/1/demo.mp4',
         alt: 'JERC Sentry demo video showcasing real-time scam call detection and alerting features.',
-        poster: '/images/projects/1/poster.png',
+        poster: project1Poster,
       },
       {
         type: 'image',
-        src: '/images/projects/1/poster.png',
+        src: project1Poster,
         alt: 'Screenshot of the JERC Sentry demo.',
       },
       {
         type: 'image',
-        src: '/images/projects/1/content1.png',
+        src: project1Content1,
         alt: 'Screenshot of a mobile device showing a notification for a scam call alert.',
       },
       {
         type: 'image',
-        src: '/images/projects/1/content2.png',
+        src: project1Content2,
         alt: 'Screenshot of the JERC Sentry React dashboard showing a detected scam call with classification details.',
       },
     ],
@@ -58,11 +73,11 @@ export const PROJECT_ITEMS: ProjectItem[] = [
         type: 'video',
         src: '/videos/projects/2/demo.mp4',
         alt: 'AI Doctors demo video showcasing the drug interaction prediction features.',
-        poster: '/images/projects/2/poster.png',
+        poster: project2Poster,
       },
       {
         type: 'image',
-        src: '/images/projects/2/poster.png',
+        src: project2Poster,
         alt: 'Screenshot of the AI Doctors React dashboard showing patient data input form.',
       },
     ],
@@ -79,12 +94,12 @@ export const PROJECT_ITEMS: ProjectItem[] = [
         type: 'video',
         src: '/videos/projects/3/demo.mp4',
         alt: 'Video showcasing the Studio Avele e-commerce platform, highlighting the product catalog, shopping cart, checkout process, and admin panel.',
-        poster: '/images/projects/3/poster.png',
+        poster: project3Poster,
         muted: true,
       },
       {
         type: 'image',
-        src: '/images/projects/3/poster.png',
+        src: project3Poster,
         alt: 'Screenshot of the Studio Avele homepage.',
       },
     ],
@@ -102,27 +117,27 @@ export const PROJECT_ITEMS: ProjectItem[] = [
         type: 'video',
         src: '/videos/projects/4/demo.mp4',
         alt: 'U of T Booking Bot demo video showcasing the GUI and automated booking process.',
-        poster: '/images/projects/4/poster.png',
+        poster: project4Poster,
         muted: true,
       },
       {
         type: 'image',
-        src: '/images/projects/4/poster.png',
+        src: project4Poster,
         alt: 'Screenshot of the U of T Booking Bot PyQt6 GUI home screen.',
       },
       {
         type: 'image',
-        src: '/images/projects/4/content1.png',
+        src: project4Content1,
         alt: 'Screenshot of the U of T Booking Bot showing the credentials setup screen.',
       },
       {
         type: 'image',
-        src: '/images/projects/4/content2.png',
+        src: project4Content2,
         alt: 'Screenshot of the U of T Booking Bot showing the run/booking screen.',
       },
       {
         type: 'image',
-        src: '/images/projects/4/content3.png',
+        src: project4Content3,
         alt: 'Screenshot of the U of T Booking Bot showing a successful booking schedule confirmation.',
       },
     ],
@@ -141,12 +156,12 @@ export const PROJECT_ITEMS: ProjectItem[] = [
         type: 'video',
         src: '/videos/projects/5/demo.mp4',
         alt: 'Video summarizing the NHL Goaltender Height Analysis project, showcasing key findings and visualizations.',
-        poster: '/images/projects/5/poster.png',
+        poster: project5Poster,
         muted: true,
       },
       {
         type: 'image',
-        src: '/images/projects/5/poster.png',
+        src: project5Poster,
         alt: 'Screenshot of the NHL Goaltender Height Analysis interactive R dashboard showing a regression tree.',
       },
     ],
@@ -165,11 +180,11 @@ export const PROJECT_ITEMS: ProjectItem[] = [
         type: 'video',
         src: '/videos/projects/6/demo.mp4',
         alt: 'Music Trivia Game demo video showcasing gameplay and features.',
-        poster: '/images/projects/6/poster.png',
+        poster: project6Poster,
       },
       {
         type: 'image',
-        src: '/images/projects/6/poster.png',
+        src: project6Poster,
         alt: 'Screenshot of the Music Trivia Game active gameplay screen.',
       },
     ],
@@ -185,17 +200,17 @@ export const PROJECT_ITEMS: ProjectItem[] = [
     media: [
       {
         type: 'image',
-        src: '/images/projects/7/content1.png',
+        src: project7Content1,
         alt: 'Screenshot of the Onyx Analytics Dashboard showing an area/line chart.',
       },
       {
         type: 'image',
-        src: '/images/projects/7/content2.png',
+        src: project7Content2,
         alt: 'Screenshot of the Onyx Analytics Dashboard showing aggregated statistics cards.',
       },
       {
         type: 'image',
-        src: '/images/projects/7/content3.png',
+        src: project7Content3,
         alt: 'Screenshot of the Onyx Analytics Dashboard showing aggregated statistics cards with date filters.',
       },
     ],
@@ -214,12 +229,12 @@ export const PROJECT_ITEMS: ProjectItem[] = [
         type: 'video',
         src: '/videos/projects/8/demo.mp4',
         alt: 'Video of the Like It Or Dump It homepage.',
-        poster: '/images/projects/8/poster.png',
+        poster: project8Poster,
         muted: true,
       },
       {
         type: 'image',
-        src: '/images/projects/8/poster.png',
+        src: project8Poster,
         alt: 'Screenshot of the Like It Or Dump It homepage.',
       },
     ],

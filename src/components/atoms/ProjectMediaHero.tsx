@@ -61,6 +61,7 @@ export function ProjectMediaHero({
           src={first.src}
           alt={first.alt}
           fill
+          placeholder='blur'
           sizes='(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw'
           className='object-cover transition-transform duration-300 group-hover:scale-105'
         />
@@ -68,7 +69,7 @@ export function ProjectMediaHero({
         <video
           ref={videoRef}
           src={first.src}
-          poster={first.poster}
+          poster={first.poster.src}
           aria-label={first.alt}
           muted
           loop

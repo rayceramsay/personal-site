@@ -2,6 +2,8 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import logoBlack from '@/assets/images/logo/rayce_logo_transparent-bg-black-font.png'
+import logoWhite from '@/assets/images/logo/rayce_logo_transparent-bg-white-font.png'
 import { Button } from '@/components/atoms/Button'
 import { ThemeToggle } from '@/components/atoms/ThemeToggle'
 import { NavLink } from '@/components/molecules/NavLink'
@@ -25,18 +27,20 @@ export function SiteHeader() {
           className='text-foreground hover:text-foreground-muted focus-visible:ring-foreground flex items-center gap-2 rounded-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none'
         >
           <Image
-            src='/images/logo/rayce_logo_transparent-bg-black-font.png'
+            src={logoBlack}
             alt=''
             width={22}
             height={22}
+            placeholder='blur'
             aria-hidden='true'
             className='block dark:hidden'
           />
           <Image
-            src='/images/logo/rayce_logo_transparent-bg-white-font.png'
+            src={logoWhite}
             alt=''
             width={22}
             height={22}
+            placeholder='blur'
             aria-hidden='true'
             className='hidden dark:block'
           />

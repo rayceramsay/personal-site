@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import professionalHeadshot from '@/assets/images/rayce_professional_headshot.png'
 import { SectionHeading } from '@/components/atoms/SectionHeading'
 import { Button } from '@/components/atoms/Button'
 import { StatCard } from '@/components/molecules/StatCard'
@@ -61,10 +62,11 @@ export function HeroSection() {
         >
           <div className='bg-surface relative aspect-4/5 overflow-hidden rounded-3xl'>
             <Image
-              src='/images/rayce_professional_headshot.png'
+              src={professionalHeadshot}
               alt='Rayce Ramsay — full stack software engineer'
               fill
               priority
+              placeholder='blur'
               className='object-cover object-top'
               sizes='(max-width: 768px) 100vw, 50vw'
             />
