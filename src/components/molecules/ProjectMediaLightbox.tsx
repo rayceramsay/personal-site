@@ -112,7 +112,7 @@ export function ProjectMediaLightbox({
           <div
             role='tablist'
             aria-label={`${projectTitle} media thumbnails`}
-            className='flex gap-2 overflow-x-auto pb-1'
+            className='flex gap-2 overflow-x-auto p-1'
           >
             {media.map((item, index) => {
               const isActive = index === activeIndex
