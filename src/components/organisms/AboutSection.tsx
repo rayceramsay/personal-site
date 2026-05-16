@@ -49,10 +49,7 @@ export function AboutSection() {
           <StatCard stat={GPA_STAT} size='lg' />
         </RevealOnScroll>
 
-        <RevealOnScroll
-          delay={100}
-          className='flex flex-col items-center gap-6 md:items-start'
-        >
+        <RevealOnScroll className='flex flex-col items-center gap-6 md:items-start'>
           <div className='bg-surface relative aspect-square w-full max-w-xs overflow-hidden rounded-2xl'>
             <Image
               src={hockeyHeadshot}

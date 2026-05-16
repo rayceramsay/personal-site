@@ -55,10 +55,7 @@ export function ContactSection() {
           </p>
         </RevealOnScroll>
 
-        <RevealOnScroll
-          delay={100}
-          className='mx-auto grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2'
-        >
+        <RevealOnScroll className='mx-auto grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2'>
           {CONTACT_LINKS.map(
             ({ icon: Icon, label, display, href, external }) => (
               <a

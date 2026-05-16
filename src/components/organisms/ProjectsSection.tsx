@@ -20,8 +20,8 @@ export function ProjectsSection() {
         </RevealOnScroll>
 
         <div className='grid grid-cols-1 gap-6 sm:grid-cols-2'>
-          {PROJECT_ITEMS.map((project, i) => (
-            <RevealOnScroll key={project.id} delay={i * 50}>
+          {PROJECT_ITEMS.map((project) => (
+            <RevealOnScroll key={project.id}>
               <ProjectCard project={project} className='h-full' />
             </RevealOnScroll>
           ))}
