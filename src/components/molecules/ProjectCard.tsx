@@ -31,7 +31,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
         onActivate={() => gallery.openAt(0)}
       />
 
-      <div className='border-foreground bg-surface border-t-2 px-5 py-4'>
+      <div className='border-foreground bg-surface px-5 py-4'>
         <h3 className='text-foreground text-base leading-tight font-bold'>
           {project.title}
         </h3>

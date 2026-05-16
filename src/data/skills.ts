@@ -49,7 +49,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     id: '4',
     category: 'Testing & Automation',
-    skills: ['JUnit', 'Mockito', 'pytest', 'Playwright'],
+    skills: ['JUnit', 'Mockito', 'pytest', 'Jest', 'Playwright'],
   },
   {
     id: '5',
