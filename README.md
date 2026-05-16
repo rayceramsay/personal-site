@@ -6,7 +6,7 @@ Personal portfolio and resume site for Rayce Ramsay. Built to showcase software 
 
 ## Tech Stack
 
-Next.js 16 | TypeScript | Tailwind CSS v4 | Radix UI | Lucide React | Vercel
+Next.js 16 (React) | TypeScript | Tailwind CSS v4 | Radix UI | Lucide React | Vercel
 
 ## Project Structure
 

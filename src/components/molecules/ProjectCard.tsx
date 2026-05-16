@@ -1,6 +1,7 @@
 'use client'
 
 import { ExternalLink } from 'lucide-react'
+import { useEffect } from 'react'
 import { GithubIcon } from '@/components/atoms/GithubIcon'
 import { ProjectMediaHero } from '@/components/atoms/ProjectMediaHero'
 import { Tag } from '@/components/atoms/Tag'
@@ -18,6 +19,20 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
   const hasLinks = project.githubUrl || project.demoUrl
   const media = project.media ?? []
   const gallery = useProjectMediaGallery({ count: media.length })
+  const { openAt } = gallery
+
+  useEffect(() => {
+    if (media.length === 0) return
+    const targetHash = `#project-${project.id}`
+
+    const openIfMatch = () => {
+      if (window.location.hash === targetHash) openAt(0)
+    }
+
+    openIfMatch()
+    window.addEventListener('hashchange', openIfMatch)
+    return () => window.removeEventListener('hashchange', openIfMatch)
+  }, [project.id, media.length, openAt])
 
   return (
     <article
