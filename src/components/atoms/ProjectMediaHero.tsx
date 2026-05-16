@@ -69,7 +69,7 @@ export function ProjectMediaHero({
         <video
           ref={videoRef}
           src={first.src}
-          poster={first.poster.src}
+          poster={`/_next/image?url=${encodeURIComponent(first.poster.src)}&w=1080&q=75`}
           aria-label={first.alt}
           muted
           loop
