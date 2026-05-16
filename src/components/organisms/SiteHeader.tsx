@@ -31,7 +31,6 @@ export function SiteHeader() {
             alt=''
             width={22}
             height={22}
-            placeholder='blur'
             aria-hidden='true'
             className='block dark:hidden'
           />
@@ -40,7 +39,6 @@ export function SiteHeader() {
             alt=''
             width={22}
             height={22}
-            placeholder='blur'
             aria-hidden='true'
             className='hidden dark:block'
           />

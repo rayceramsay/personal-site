@@ -45,11 +45,6 @@ export const PROJECT_ITEMS: ProjectItem[] = [
       },
       {
         type: 'image',
-        src: project1Poster,
-        alt: 'Screenshot of the JERC Sentry demo.',
-      },
-      {
-        type: 'image',
         src: project1Content1,
         alt: 'Screenshot of a mobile device showing a notification for a scam call alert.',
       },
@@ -75,11 +70,6 @@ export const PROJECT_ITEMS: ProjectItem[] = [
         alt: 'AI Doctors demo video showcasing the drug interaction prediction features.',
         poster: project2Poster,
       },
-      {
-        type: 'image',
-        src: project2Poster,
-        alt: 'Screenshot of the AI Doctors React dashboard showing patient data input form.',
-      },
     ],
   },
   {
@@ -96,11 +86,6 @@ export const PROJECT_ITEMS: ProjectItem[] = [
         alt: 'Video showcasing the Studio Avele e-commerce platform, highlighting the product catalog, shopping cart, checkout process, and admin panel.',
         poster: project3Poster,
         muted: true,
-      },
-      {
-        type: 'image',
-        src: project3Poster,
-        alt: 'Screenshot of the Studio Avele homepage.',
       },
     ],
   },
@@ -119,11 +104,6 @@ export const PROJECT_ITEMS: ProjectItem[] = [
         alt: 'U of T Booking Bot demo video showcasing the GUI and automated booking process.',
         poster: project4Poster,
         muted: true,
-      },
-      {
-        type: 'image',
-        src: project4Poster,
-        alt: 'Screenshot of the U of T Booking Bot PyQt6 GUI home screen.',
       },
       {
         type: 'image',
@@ -159,11 +139,6 @@ export const PROJECT_ITEMS: ProjectItem[] = [
         poster: project5Poster,
         muted: true,
       },
-      {
-        type: 'image',
-        src: project5Poster,
-        alt: 'Screenshot of the NHL Goaltender Height Analysis interactive R dashboard showing a regression tree.',
-      },
     ],
   },
   {
@@ -181,11 +156,6 @@ export const PROJECT_ITEMS: ProjectItem[] = [
         src: '/videos/projects/6/demo.mp4',
         alt: 'Music Trivia Game demo video showcasing gameplay and features.',
         poster: project6Poster,
-      },
-      {
-        type: 'image',
-        src: project6Poster,
-        alt: 'Screenshot of the Music Trivia Game active gameplay screen.',
       },
     ],
   },
@@ -231,11 +201,6 @@ export const PROJECT_ITEMS: ProjectItem[] = [
         alt: 'Video of the Like It Or Dump It homepage.',
         poster: project8Poster,
         muted: true,
-      },
-      {
-        type: 'image',
-        src: project8Poster,
-        alt: 'Screenshot of the Like It Or Dump It homepage.',
       },
     ],
   },
